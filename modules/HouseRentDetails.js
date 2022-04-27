@@ -1,6 +1,6 @@
 const mongoose= require('mongoose');
 
-const HouseSchema= new mongoose.Schema(
+const HouseRentSchema= new mongoose.Schema(
 {
 name:
 {
@@ -67,7 +67,7 @@ area:
     type:Number,
     required:true
 },
-price:
+rent:
 {
     type:Number,
     required:true
@@ -80,5 +80,5 @@ photos:
 
 })
 
-const HouseDetails=mongoose.model("HouseDetails",HouseSchema)
-module.exports=HouseDetails
+const HouseRentDetails=mongoose.model("HouseRentDetails",HouseRentSchema)
+module.exports=HouseRentDetails

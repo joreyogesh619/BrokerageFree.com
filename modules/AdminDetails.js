@@ -1,6 +1,6 @@
 
 const mongoose= require('mongoose');
-const UserSchema= new mongoose.Schema(
+const AdminSchema= new mongoose.Schema(
 {
 Fullname:
 {
@@ -36,23 +36,8 @@ Adharnumber:
 {
     type:Number,
     required:true
-},
-photos:
-{
-    type:String,
-    required:false
-},
-Employeeid:
-{
-    type:Number,
-    required:false
-},
-Salary:
-{
-    type:Number,
-    required:false
 }
 })
 
-const UserDetails=mongoose.model("UserDetails",UserSchema)
-module.exports=UserDetails;
+const AdminDetails=mongoose.model("AdminDetails",AdminSchema)
+module.exports=AdminDetails

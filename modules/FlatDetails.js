@@ -1,6 +1,6 @@
 const mongoose= require('mongoose');
 
-const HouseSchema= new mongoose.Schema(
+const FlatSchema= new mongoose.Schema(
 {
 name:
 {
@@ -17,6 +17,7 @@ address:
     type:String,
     required:true
 },
+
 state:
 {
     type:String,
@@ -27,6 +28,13 @@ district:
     type:String,
     required:true
 },
+
+appartmentname:
+{
+    type:String,
+    required:false //mandatory then true and if not mandatory then use false
+},
+
 noofhalls:
 {
     type:Number,
@@ -62,6 +70,13 @@ noofbalconies:
     type:Number,
     required:false
 },
+
+parking:
+{
+    type:String,
+    required:true
+},
+
 area:
 {
     type:Number,
@@ -75,10 +90,10 @@ price:
 photos:
 {
     type:String,
-    required:false
+    required:true
 }
 
 })
 
-const HouseDetails=mongoose.model("HouseDetails",HouseSchema)
-module.exports=HouseDetails
+const FlatDetails=mongoose.model("FlatDetails",FlatSchema)
+module.exports=FlatDetails
